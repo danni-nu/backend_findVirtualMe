@@ -8,9 +8,9 @@ const fetch =
   global.fetch ||
   ((...args) => import("node-fetch").then(({ default: f }) => f(...args)));
 
-const USE_FALLBACK = process.env.NODE_ENV !== "production";  // Use the online fallback only in non-production environments.
+// const USE_FALLBACK = process.env.NODE_ENV !== "production";   Use the online fallback only in non-production environments.
 // it‘s better that it is changed to false
-//const USE_FALLBACK = false
+const USE_FALLBACK = false
 
 // Get client IP address (supports reverse proxy)
 function getClientIp(req) {
