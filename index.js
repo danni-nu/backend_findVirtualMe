@@ -40,10 +40,11 @@ const PORT = process.env.PORT;
 // trust proxy: so req.ip / X-Forwarded-For works behind proxies
 app.set("trust proxy", true);
 
-app.use(cors({
-  origin: config.server.corsOrigin,
-  credentials: true
-}));
+// app.use(cors({
+//   origin: config.server.corsOrigin,
+//   credentials: true
+// }));
+app.use(cors({ origin: "https://frontend-find-virtual-me-one.vercel.app/" }))
 app.use(express.json());
 setCredentialsFromEnv();
 
