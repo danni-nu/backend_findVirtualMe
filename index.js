@@ -44,7 +44,7 @@ app.set("trust proxy", true);
 //   origin: config.server.corsOrigin,
 //   credentials: true
 // }));
-app.use(cors({ origin: "https://frontend-find-virtual-me-one.vercel.app/" }))
+app.use(cors({ origin: "https://frontend-find-virtual-me-one.vercel.app" }))
 app.use(express.json());
 setCredentialsFromEnv();
 
